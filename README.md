@@ -1,4 +1,6 @@
-![](./media/header.svg)
+<a href="https://ralphabejuela.com">
+  <img src="https://ralphabejuela.com/images/og-default.png" alt="drawing" height="400"/>
+<a/>
 
 # Hi, I'm Ralph 👋
 
