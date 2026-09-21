@@ -15,7 +15,7 @@ the longer ones have a deep-dive on [my blog](https://ralphabejuela.com).
 ## About Me
 
 - 🎓 **BS Information Technology**, STI College Legazpi — Cum Laude, 1.4 GWA, 2026
-- 💼 **Backend Developer Intern, DOST Region V** (4 months) — led a 3-person intern team building REST microservices with PostgreSQL, Docker and Jest
+- 💼 **Backend Developer Intern, DOST Region V** (4 months) — volunteered to lead a 3-person intern team: assigned the work, owned the reporting, and took the Clean Architecture to MVC refactor myself
 - 🔧 **Debugging, and writing it up** — traced and fixed bugs upstream in two projects I don't own, both merged; every project here ships with a README
 - 🧠 **LLM/AI tooling** — on-device classification with Transformers.js, and a GEPA prompt optimizer scored against a held-out eval set
 - ⚙️ **Delivery** — CI/CD with GitHub Actions, Docker, Nginx, Jest, Agile/Scrum, Linux daily driver
@@ -36,7 +36,7 @@ Two of these are merged into projects with 27,382 and 3,223 stars:
 
 ### Agri-Connect — warehouse management for a government agency
 
-Full-stack system built for and deployed to a government client: warehouse and inventory management, automated
+The only programmer on a 4-person team (the other three handled documentation and stakeholder relations): I built the backend, the frontend and the deployment. Warehouse and inventory management, automated
 reporting, and a Facebook chatbot that absorbs routine inquiries so staff stop answering the same questions by
 hand.
 
