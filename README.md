@@ -1,21 +1,32 @@
 <a href="https://ralphabejuela.com">
-  <img src="https://ralphabejuela.com/images/og-default.png" alt="drawing" height="400"/>
-<a/>
+  <img src="https://ralphabejuela.com/images/og-default.png" alt="Ralph Abejuela — full-stack and backend developer" height="400"/>
+</a>
 
 # Hi, I'm Ralph 👋
 
-**Full-Stack Developer · TypeScript · React · Node.js**
+**Full-stack & backend developer · TypeScript · React · Node.js · Python · SQL**
 
-I build privacy-first web applications. Currently focused on client-side architectures that keep user data where it belongs: on the device.
+I build privacy-first software — mostly client-side architectures that keep user data on the device — and I
+measure what I ship instead of guessing. Currently going deeper on backend services and on-device ML.
 
 ---
 
 ## About Me
 
 - 🎓 BS Information Technology, STI College Legazpi (Cum Laude, 1.4 GWA)
-- 💼 Backend Developer Intern at DOST Region V: led a team of 3 building REST microservices with TypeScript, Node.js, and Docker
-- 🧠 Deep interest in on-device ML, local LLMs, and zero-server architecture
+- 💼 Backend Developer Intern at DOST Region V — led a team of 3 building REST microservices with TypeScript, Node.js, and Docker
+- 🧠 On-device ML, local LLMs, zero-server architecture
 - 🐧 CachyOS Linux daily driver
+
+---
+
+## Merged upstream contributions
+
+Code merged by maintainers of projects I don't own. Each link goes to the pull request, not to a fork:
+
+- **[Kilo-Org/kilocode#2849](https://github.com/Kilo-Org/kilocode/pull/2849)** — respect the rate limit configured in the settings (merged, 27k★ project)
+- **[mnemosyne-oss/mnemosyne#915](https://github.com/mnemosyne-oss/mnemosyne/pull/915)** — force UTF-8 stdout/stderr in `run_cli`, fixing `UnicodeEncodeError` on Windows pipes (merged, 3.2k★ project)
+- Open: **[4fuu/pi-pwsh#17](https://github.com/4fuu/pi-pwsh/pull/17)** — allow stopping a task from any session
 
 ---
 
@@ -44,17 +55,32 @@ I build privacy-first web applications. Currently focused on client-side archite
 
 ### [ejobtrack](https://github.com/Ralph-Abejuela/ejobtrack)
 
-Zero-server job tracking SPA. Syncs Gmail via OAuth 2.0, classifies 50+ ATS senders with on-device ML (Transformers.js), and stores everything in IndexedDB. No backend, no data leakage. Built with React, TypeScript, and Cloudflare Pages.
+Zero-server job tracking SPA. Syncs Gmail via OAuth 2.0, classifies applications from 50+ ATS senders with
+regex parsers and an on-device ML fallback (Transformers.js), and keeps everything in IndexedDB. No backend, so
+no data leaves the browser. React · TypeScript · Cloudflare Pages.
 
-### Agri-Connect
+### [Automated-HoloCure-Fishing](https://github.com/Ralph-Abejuela/Automated-HoloCure-Fishing) · 84★
 
-Full-stack warehouse management system built for a government agency. Automated report generation, Facebook chatbot integration, and CI/CD pipeline via GitHub Actions and Nginx.
+OpenCV computer-vision bot that plays a game's fishing and mining minigames: real-time screen capture plus
+template matching, windowed-resolution agnostic, cross-platform (Windows/Linux/X11), packaged as a standalone
+executable with Nuitka. Python · OpenCV · NumPy.
 
-React · Node.js · TypeScript · PostgreSQL · Docker
+### [portfolio](https://github.com/Ralph-Abejuela/portfolio) · [live](https://ralphabejuela.com)
 
-### [kilocode](https://github.com/hacksider/kilocode) (OSS Contributor)
+My dev portfolio and blog — local LLMs, GEPA prompt optimization, and an ejobtrack deep-dive. Astro ·
+TypeScript.
 
-Contributed an API rate-limiting control feature to this open-source AI coding agent. Implemented configurable `rateLimitAfter` behavior across backend logic and React UI components.
+### [skill-optimizer-gepa](https://github.com/Ralph-Abejuela/skill-optimizer-gepa)
+
+GEPA-based prompt-optimization toolkit: mines eval sets from real work artifacts, scores output with hard
+format checks plus an LLM judge, evolves prompts with a checkpoint/resume loop, and A/B tests candidates.
+Raised one skill's measured score from 0.725 to 0.850 on a held-out set. Python · litellm · any
+OpenAI-compatible endpoint, cloud or local.
+
+**Also built:** Agri-Connect — full-stack warehouse management for a government agency (automated reporting, a
+Facebook chatbot for routine inquiries, CI/CD over SSH with Nginx). Client repo is private. Plus
+[nvim-config](https://github.com/Ralph-Abejuela/nvim-config) and
+[pi-obscura](https://github.com/Ralph-Abejuela/pi-obscura).
 
 ---
 
@@ -74,5 +100,5 @@ Contributed an API rate-limiting control feature to this open-source AI coding a
 ---
 
 <p align="center">
-  <i>Open to full-stack and backend opportunities.</i>
+  <i>Open to full-stack, backend, and data/AI roles · Mandaluyong, Metro Manila</i>
 </p>
