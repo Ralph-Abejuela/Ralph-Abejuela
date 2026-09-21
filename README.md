@@ -1,93 +1,82 @@
 <a href="https://ralphabejuela.com">
-  <img src="https://ralphabejuela.com/images/og-default.png" alt="Ralph Abejuela — full-stack and backend developer" height="400"/>
+  <img src="https://ralphabejuela.com/images/og-default.png" alt="Ralph Abejuela — backend and full-stack developer" height="220"/>
 </a>
 
-# Hi, I'm Ralph 👋
+# Ralph Abejuela
 
-**Full-stack & backend developer · TypeScript · React · Node.js · Python · SQL**
+**2026 BSIT graduate (Cum Laude, 1.4 GWA) · backend & full-stack · SQL · TypeScript · Python · Java · open to junior and entry-level roles**
 
-I build privacy-first software — mostly client-side architectures that keep user data on the device — and I
-measure what I ship instead of guessing. Currently going deeper on backend services and on-device ML.
+Four months as a Backend Developer Intern at DOST Region V, leading a 3-person intern team on REST microservices
+(TypeScript, Node.js, Docker, PostgreSQL, Jest). I write up what I ship — every project below has a README, and
+the longer ones have a deep-dive on [my blog](https://ralphabejuela.com).
 
 ---
 
 ## About Me
 
-- 🎓 BS Information Technology, STI College Legazpi (Cum Laude, 1.4 GWA)
-- 💼 Backend Developer Intern at DOST Region V — led a team of 3 building REST microservices with TypeScript, Node.js, and Docker
-- 🧠 On-device ML, local LLMs, zero-server architecture
-- 🐧 CachyOS Linux daily driver
+- 🎓 **BS Information Technology**, STI College Legazpi — Cum Laude, 1.4 GWA, 2026
+- 💼 **Backend Developer Intern, DOST Region V** (4 months) — led a 3-person intern team building REST microservices with PostgreSQL, Docker and Jest
+- 🔧 **Debugging, and writing it up** — traced and fixed bugs upstream in two projects I don't own, both merged; every project here ships with a README
+- 🧠 **LLM/AI tooling** — on-device classification with Transformers.js, and a GEPA prompt optimizer scored against a held-out eval set
+- ⚙️ **Delivery** — CI/CD with GitHub Actions, Docker, Nginx, Jest, Agile/Scrum, Linux daily driver
 
 ---
 
-## Merged upstream contributions
+## Patches in other people's repos
 
-Code merged by maintainers of projects I don't own. Each link goes to the pull request, not to a fork:
+Two of these are merged into projects with 27,382 and 3,223 stars:
 
-- **[Kilo-Org/kilocode#2849](https://github.com/Kilo-Org/kilocode/pull/2849)** — respect the rate limit configured in the settings (merged, 27k★ project)
-- **[mnemosyne-oss/mnemosyne#915](https://github.com/mnemosyne-oss/mnemosyne/pull/915)** — force UTF-8 stdout/stderr in `run_cli`, fixing `UnicodeEncodeError` on Windows pipes (merged, 3.2k★ project)
-- Open: **[4fuu/pi-pwsh#17](https://github.com/4fuu/pi-pwsh/pull/17)** — allow stopping a task from any session
-
----
-
-## Tech Stack
-
-**Languages**
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
-**Frameworks & Tools**
-
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+- **[Kilo-Org/kilocode#2849](https://github.com/Kilo-Org/kilocode/pull/2849)** *(merged)* — the user rate limit started at request send instead of stream close, so generation time ate the configured delay. Moved the timestamp update to after the stream.
+- **[mnemosyne-oss/mnemosyne#915](https://github.com/mnemosyne-oss/mnemosyne/pull/915)** *(merged)* — `run_cli` crashed with `UnicodeEncodeError` on Windows pipes (cp1252 default). Forced UTF-8 stdout/stderr; the regression test fails on `main`.
+- Open: **[4fuu/pi-pwsh#17](https://github.com/4fuu/pi-pwsh/pull/17)** — `stop()` refused tasks belonging to another session, so leaked process trees could never be killed. Dropped the session gate on that path only.
 
 ---
 
-## Featured Projects
+## Projects
+
+### Agri-Connect — warehouse management for a government agency
+
+Full-stack system built for and deployed to a government client: warehouse and inventory management, automated
+reporting, and a Facebook chatbot that absorbs routine inquiries so staff stop answering the same questions by
+hand.
+
+React · Node.js · TypeScript · PostgreSQL · Docker · GitHub Actions · Nginx — CI/CD deploys over SSH behind Nginx.
+The client repo is private; happy to walk through the architecture, schema and pipeline on a call.
 
 ### [ejobtrack](https://github.com/Ralph-Abejuela/ejobtrack)
 
-Zero-server job tracking SPA. Syncs Gmail via OAuth 2.0, classifies applications from 50+ ATS senders with
-regex parsers and an on-device ML fallback (Transformers.js), and keeps everything in IndexedDB. No backend, so
-no data leaves the browser. React · TypeScript · Cloudflare Pages.
+Job-tracking SPA. Syncs Gmail over OAuth 2.0, classifies applications from 50+ ATS senders with regex parsers and
+an on-device Transformers.js fallback, and stores everything in IndexedDB. There is no backend of mine, so user
+data never leaves the browser. React · TypeScript · Cloudflare Pages.
 
 ### [Automated-HoloCure-Fishing](https://github.com/Ralph-Abejuela/Automated-HoloCure-Fishing) · 84★
 
-OpenCV computer-vision bot that plays a game's fishing and mining minigames: real-time screen capture plus
-template matching, windowed-resolution agnostic, cross-platform (Windows/Linux/X11), packaged as a standalone
-executable with Nuitka. Python · OpenCV · NumPy.
-
-### [portfolio](https://github.com/Ralph-Abejuela/portfolio) · [live](https://ralphabejuela.com)
-
-My dev portfolio and blog — local LLMs, GEPA prompt optimization, and an ejobtrack deep-dive. Astro ·
-TypeScript.
+Real-time computer vision in Python/OpenCV: screen capture plus template matching tuned to be
+windowed-resolution agnostic, correct across Windows and Linux/X11, and shipped to users as a standalone
+executable packaged with Nuitka. The domain is a game; the CV pipeline and the release packaging are the point.
 
 ### [skill-optimizer-gepa](https://github.com/Ralph-Abejuela/skill-optimizer-gepa)
 
-GEPA-based prompt-optimization toolkit: mines eval sets from real work artifacts, scores output with hard
-format checks plus an LLM judge, evolves prompts with a checkpoint/resume loop, and A/B tests candidates.
-Raised one skill's measured score from 0.725 to 0.850 on a held-out set. Python · litellm · any
-OpenAI-compatible endpoint, cloud or local.
+GEPA-based prompt optimizer: mines eval sets from real work artifacts, scores output with hard format checks plus
+an LLM judge, evolves prompts with a checkpoint/resume loop, and A/B tests candidates. Raised one skill's
+measured score from 0.725 to 0.850 on a held-out set. Python · litellm · any OpenAI-compatible endpoint.
 
-**Also built:** Agri-Connect — full-stack warehouse management for a government agency (automated reporting, a
-Facebook chatbot for routine inquiries, CI/CD over SSH with Nginx). Client repo is private. Plus
-[nvim-config](https://github.com/Ralph-Abejuela/nvim-config) and
-[pi-obscura](https://github.com/Ralph-Abejuela/pi-obscura).
+### [portfolio + blog](https://github.com/Ralph-Abejuela/portfolio) · [live](https://ralphabejuela.com)
+
+Where the write-ups live: local LLMs, GEPA prompt optimization, an ejobtrack deep-dive. Astro · TypeScript.
 
 ---
 
 ## Competition
 
-- 🥇 **1st Place** — STI Local Codefest (campus), built a movie reservation app in Java/Android Studio
-- 🥈 **2nd Place** — STI Regional Cluster, outperformed teams from 8 schools
+- 🥇 **1st Place** — STI Local Codefest (campus): designed and built a movie reservation app in **Java** / Android Studio
+- 🥈 **2nd Place** — STI Regional Cluster, ahead of teams from 8 schools
+
+---
+
+## Stack
+
+TypeScript · JavaScript · Java · Python · SQL (PostgreSQL) · React · Node.js · Jest · Docker · GitHub Actions · Nginx · Linux · Git · Agile/Scrum
 
 ---
 
@@ -100,5 +89,6 @@ Facebook chatbot for routine inquiries, CI/CD over SSH with Nginx). Client repo 
 ---
 
 <p align="center">
-  <i>Open to full-stack, backend, and data/AI roles · Mandaluyong, Metro Manila</i>
+  <i>2026 graduate, open to junior and entry-level backend, full-stack, SQL/data and AI/LLM tooling roles<br/>
+  Mandaluyong, Metro Manila · abejuela.ralph.balatucan@gmail.com</i>
 </p>
