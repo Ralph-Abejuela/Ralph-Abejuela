@@ -28,7 +28,7 @@ Two of these are merged into projects with 27,382 and 3,223 stars:
 
 - **[Kilo-Org/kilocode#2849](https://github.com/Kilo-Org/kilocode/pull/2849)** *(merged)* — the rate-limit countdown started when the request was sent, so generation time ate the user's configured delay. Added a setting to start it after the stream ends instead.
 - **[mnemosyne-oss/mnemosyne#915](https://github.com/mnemosyne-oss/mnemosyne/pull/915)** *(merged)* — `run_cli` crashed with `UnicodeEncodeError` on Windows pipes (cp1252 default). Forced UTF-8 stdout/stderr; the regression test fails on `main`.
-- Open: **[4fuu/pi-pwsh#17](https://github.com/4fuu/pi-pwsh/pull/17)** — `stop()` refused tasks belonging to another session, so leaked process trees could never be killed. Dropped the session gate on that path only.
+- **[4fuu/pi-pwsh#17](https://github.com/4fuu/pi-pwsh/pull/17)** *(merged)* — `stop()` refused tasks belonging to another session, so leaked process trees could never be killed. Dropped the session gate on that path only.
 
 ---
 
